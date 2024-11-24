@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="deportesApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Deportes</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="contacto.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        angular.module('deportesApp', [])
+            .controller('ContactoController', function ($scope) {
+                $scope.formData = {};
+                $scope.enviarFormulario = function() {
+                    // Lógica para enviar el formulario
+                    console.log("Formulario enviado", $scope.formData);
+                };
+            });
+    </script>
+</head>
+<body ng-controller="ContactoController">
+    <header>
+        <img src="https://i.ibb.co/N20rK3p/images-removebg-preview.png" alt="Logo de Deportes XYZ" class="logo">
+        <h1>Deportes</h1>
+        <nav>
+            <ul>
+                <li><a href="proyecto.html">Inicio</a></li>
+                <li><a href="acerca_de.html">Acerca de</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contáctanos</h2>
+        <form name="formulario" class="contact-form" ng-submit="enviarFormulario()" action="contactanos.php" method="post" novalidate>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" ng-model="formData.nombre" maxlength="35" required 
+                   ng-class="{'is-invalid': formulario.nombre.$invalid && formulario.nombre.$dirty}">
+            <div ng-show="formulario.nombre.$invalid && formulario.nombre.$dirty" class="error-message">
+                El nombre es requerido.
+            </div>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" ng-model="formData.email" maxlength="60" required 
+                   ng-class="{'is-invalid': formulario.email.$invalid && formulario.email.$dirty}">
+            <div ng-show="formulario.email.$invalid && formulario.email.$dirty" class="error-message">
+                Por favor, ingresa un correo electrónico válido.
+            </div>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" ng-model="formData.mensaje" rows="4" required 
+                      ng-class="{'is-invalid': formulario.mensaje.$invalid && formulario.mensaje.$dirty}"></textarea>
+            <div ng-show="formulario.mensaje.$invalid && formulario.mensaje.$dirty" class="error-message">
+                El mensaje es requerido.
+            </div>
+            
+            <button type="submit" ng-disabled="formulario.$invalid">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2023 Deportes XYZ. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

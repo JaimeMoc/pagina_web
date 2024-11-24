@@ -1,0 +1,183 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenido principal */
+main {
+    padding: 20px;
+    background-color: floralwhite;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color:#333;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos del formulario de contacto */
+form {
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ajustar el ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario horizontalmente */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%; /* Mantener el ancho completo */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Hacer el botón del mismo ancho que el formulario */
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.card {
+    border: 10px solid white;
+    border-radius: 15px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+.card img {
+    width: 80%; 
+    height: auto;
+    margin: 5px auto; 
+    display: block;
+    border-bottom: 10px solid white;
+}
+.card-footer {
+    padding: 10px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+}
+
+.card2 {
+    border: 10px solid white;
+    border-radius: 15px;
+    width: 100px;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+.card2 img {
+    width: 80%; 
+    height: auto;
+    margin: 5px auto; 
+    display: block;
+    border-bottom: 10px solid white;
+}
+.card2-footer {
+    padding: 10px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+}
+
+#auth-buttons {
+    text-align: center;
+}
+
+#auth-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #1b9930;
+    color: #333;;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#auth-buttons button:hover {
+    background-color: #333;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+.is-invalid {
+    border-color: red;
+}
+
+section {
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+}
